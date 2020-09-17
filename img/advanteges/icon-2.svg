@@ -1,0 +1,15 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="40" cy="40" r="40" fill="#FF866B"/>
+<rect x="21" y="23" width="38" height="38" rx="2" stroke="white" stroke-width="2"/>
+<rect x="26.4286" y="28.4286" width="27.1429" height="27.1429" rx="13.5714" stroke="white" stroke-width="2"/>
+<circle cx="34.5714" cy="42.0001" r="2.71429" fill="white"/>
+<circle cx="45.4286" cy="42.0001" r="2.71429" fill="white"/>
+<rect x="38.6428" y="28.7856" width="2.71429" height="2.71429" fill="white"/>
+<rect x="38.6428" y="52.5" width="2.71429" height="2.71429" fill="white"/>
+<path d="M25.0714 31.1428V27.0714H29.1428" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M54.9298 52.8666L54.9272 56.938L50.8558 56.9354" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M50.8572 27.0714H54.9286V31.1428" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M29.1416 56.9215L25.0701 56.9189L25.0727 52.8475" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="56" cy="51" r="12" fill="#FF866B" stroke="white" stroke-width="2"/>
+<path d="M48 46C47.4477 46 47 46.4477 47 47C47 47.5523 47.4477 48 48 48V46ZM53.7778 47H54.7778V46H53.7778V47ZM53.7778 49.8H52.7778V50.8H53.7778V49.8ZM61.7778 49.8H62.7778V48.8H61.7778V49.8ZM61.7778 57L60.9268 57.5253L61.7778 58.9038L62.6287 57.5253L61.7778 57ZM64.8509 53.9253C65.141 53.4553 64.9952 52.8392 64.5253 52.5491C64.0553 52.259 63.4392 52.4048 63.1491 52.8747L64.8509 53.9253ZM60.4065 52.8747C60.1164 52.4048 59.5002 52.259 59.0303 52.5491C58.5603 52.8392 58.4145 53.4553 58.7046 53.9253L60.4065 52.8747ZM48 48H53.7778V46H48V48ZM52.7778 47V49.8H54.7778V47H52.7778ZM53.7778 50.8H61.7778V48.8H53.7778V50.8ZM60.7778 49.8V57H62.7778V49.8H60.7778ZM62.6287 57.5253L64.8509 53.9253L63.1491 52.8747L60.9268 56.4747L62.6287 57.5253ZM58.7046 53.9253L60.9268 57.5253L62.6287 56.4747L60.4065 52.8747L58.7046 53.9253Z" fill="white"/>
+</svg>
