@@ -1624,7 +1624,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 677px) {
   .block__desc {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 .block__list {
