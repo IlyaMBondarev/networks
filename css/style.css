@@ -75,6 +75,10 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
 }
 
+.wrong {
+  visibility: hidden;
+}
+
 .white-circle-button {
   margin-top: 50px;
   margin-bottom: 50px;
@@ -151,13 +155,18 @@ h1, h2, h3, h4, h5, h6 {
   background-blend-mode: multiply, screen;
   background-size: cover;
 }
+@media (max-width: 500px) {
+  .header {
+    height: initial;
+  }
+}
 .header > .container {
   opacity: 1;
   visibility: visible;
   transition: opacity 0.2s linear, visibility 0s linear 0.2s;
 }
 .header__top {
-  margin-bottom: 15vh;
+  margin-bottom: 10vh;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -286,12 +295,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 500px) {
   .header__subtitle {
-    font-size: 13px;
+    font-size: 14px;
     margin-top: 18px;
   }
 }
 .header__consult {
-  margin-top: 15vh;
+  margin-top: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -361,17 +370,28 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 500px) {
   .header__button {
-    padding: 10px 30px;
-    font-size: 8px;
+    margin-bottom: 20px;
+    padding: 10px 25px;
+    font-size: 10px;
   }
 }
 
 .popup-header {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.39);
+}
+.popup-header-bg {
+  transition: opacity 0.2s linear;
+  top: 0;
   opacity: 0;
   visibility: hidden;
-  position: absolute;
-  transition: opacity 0.2s linear 0.2s, visibility 0s linear 0.2s;
-  background-color: rgba(0, 0, 0, 0.39);
+  z-index: -1;
+  position: fixed;
+  width: 100%;
+  min-height: 100%;
+  background: url(../img/earth-background.jpg) no-repeat left center, linear-gradient(253.23deg, #6209D5 0%, rgba(44, 173, 202, 0.97) 100%);
+  background-blend-mode: multiply, screen;
+  background-size: cover;
 }
 .popup-header__title {
   color: #FFFFFF;
@@ -540,7 +560,6 @@ h1, h2, h3, h4, h5, h6 {
   transform: translate(-50%, -50%);
   background: #f7fcff;
   border: 1px solid rgba(43, 172, 226, 0.26);
-  min-width: 30%;
   width: 850px;
 }
 @media (max-width: 900px) {
@@ -809,6 +828,9 @@ h1, h2, h3, h4, h5, h6 {
     width: 30px;
     height: 30px;
   }
+}
+.popup-description__close {
+  cursor: pointer;
 }
 .popup-description-bg {
   background-color: rgba(221, 236, 242, 0.9);
@@ -1106,11 +1128,6 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 70px;
   }
 }
-@media (max-width: 470px) {
-  .build {
-    margin-bottom: 30px;
-  }
-}
 .build__title {
   color: #113464;
   font-size: 40px;
@@ -1167,11 +1184,6 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   width: 100%;
   background-color: #21344F;
-}
-@media (max-width: 767px) {
-  .build__block {
-    flex-direction: column;
-  }
 }
 .build__left {
   position: relative;
@@ -1289,7 +1301,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .build__right {
   width: 50%;
-  background: url("../img/to-build/global-network.png") no-repeat;
+  background: url("../img/to-build/global-network.jpg") no-repeat;
   background-size: cover;
 }
 @media (max-width: 950px) {
@@ -1304,14 +1316,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 767px) {
   .build__right {
-    height: 400px;
-    width: 100%;
-    position: static;
-  }
-}
-@media (max-width: 400px) {
-  .build__right {
-    height: 200px;
+    display: none;
   }
 }
 
@@ -1395,7 +1400,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 470px) {
   .series__content {
-    font-size: 10px;
     margin: 20px auto 30px;
     line-height: 14px;
   }
@@ -1620,7 +1624,7 @@ h1, h2, h3, h4, h5, h6 {
   .block__list {
     margin-top: 15px;
     margin-bottom: 15px;
-    max-height: 100px;
+    max-height: 105px;
   }
 }
 @media (max-width: 450px) {
@@ -1642,7 +1646,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 450px) {
   .block__paragraph {
-    font-size: 8px;
+    font-size: 10px;
     line-height: 15px;
   }
 }
@@ -1932,7 +1936,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 450px) {
   .offer__button {
-    font-size: 10px;
     margin-top: 10px;
   }
   .offer__button::after {
@@ -2228,9 +2231,9 @@ h1, h2, h3, h4, h5, h6 {
     width: 75%;
   }
 }
-@media (max-width: 450px) {
+@media (max-width: 500px) {
   .about__left {
-    width: 100%;
+    display: none;
   }
 }
 .about__left > img {
@@ -2490,4 +2493,10 @@ h1, h2, h3, h4, h5, h6 {
   .consult__wrong {
     font-size: 10px;
   }
+}
+.consult__agree {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  color: #ffffff;
 }
