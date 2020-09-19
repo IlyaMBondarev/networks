@@ -13,9 +13,9 @@ forms.forEach(form => {
     let wrongMessage = form.querySelector('.wrong');
     let button = form.querySelector('button');
     button.addEventListener('click', () => {
-        form.preventDefault();
         if (inputs[0].value === '' || inputs[1].value === '') {
             wrongMessage.style.visibility = 'visible';
+            return false
         } else {
             wrongMessage.style.visibility = 'hidden';
             form.submit();
@@ -53,6 +53,7 @@ let popupDescTopSpan = popupDescTop.querySelector('span');
 let popupDescName = popupDesc.querySelector('.popup-description__name');
 let popupDescList = popupDesc.querySelector('.popup-description__list');
 let popupDescToOrder = popupDesc.querySelector('.popup-description__button');
+let popupDescFull = popupDesc.querySelector('.popup-description__full');
 
 let popupOrder = document.querySelector('.popup-order-bg');
 let popupOrderName = popupOrder.querySelector('.popup-order__title').querySelector('span');
@@ -98,11 +99,13 @@ blocks.forEach(block => {
     let lists = block.querySelectorAll('.block__paragraph');
     let openMore = block.querySelector('.block__more');
     let toOrder = block.querySelector('.block__button');
+    let full = name.dataset.full;
     openMore.addEventListener('click', () => {
         popupDescName.textContent = name.textContent;
         popupDescTopImg.src = `img/300-serie/${top}.svg`;
         popupDescTopImg.alt = `${top}`;
         popupDescTopSpan.textContent = `${top}`;
+        popupDescFull.href = `${full}`;
         let inner = '';
         lists.forEach(list => {
             inner += '<li class="popup-description__paragraph">' + list.textContent + '</li>'
