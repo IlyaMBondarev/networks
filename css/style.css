@@ -722,7 +722,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 500px) {
   .popup-description__desc {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 .popup-description__list {
@@ -759,13 +759,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 677px) {
   .popup-description__paragraph {
-    font-size: 12px;
     line-height: 20px;
   }
 }
 @media (max-width: 500px) {
   .popup-description__paragraph {
-    font-size: 10px;
+    font-size: 12px;
     line-height: 15px;
   }
 }
@@ -1418,16 +1417,9 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 18px;
   }
 }
-@media (max-width: 677px) {
-  .series__content {
-    font-size: 12px;
-    line-height: 16px;
-  }
-}
 @media (max-width: 470px) {
   .series__content {
     margin: 20px auto 30px;
-    line-height: 14px;
   }
 }
 .series__blocks {
@@ -1632,12 +1624,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 677px) {
   .block__desc {
-    font-size: 14px;
-  }
-}
-@media (max-width: 450px) {
-  .block__desc {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 .block__list {
@@ -1666,14 +1653,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 677px) {
   .block__paragraph {
-    font-size: 12px;
     line-height: 20px;
   }
 }
 @media (max-width: 450px) {
   .block__paragraph {
-    font-size: 10px;
-    line-height: 15px;
+    font-size: 12px;
+    line-height: 17px;
   }
 }
 .block__more, .block__full {
