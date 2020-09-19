@@ -16,7 +16,7 @@
             <div class="header__column"><a href="index.html"><img src="img/logo-think-value-white.svg" alt="logo-think-value-white"></a></div>
             <div class="header__column"><a href="index.html"><img src="img/logo-extreme-white.svg" alt="logo-extreme-white"></a></div>
             <div class="header__column">
-                <p class="header__phone">+7 (495) 956 17 17</p>
+                <p class="header__phone"><a href="#">+7 (495) 956 17 17</a></p>
                 <button class="header__recall-btn"><span>Обратный звонок</span><div></div></button>
             </div>
         </div>
@@ -33,15 +33,16 @@
             <button class="header__button">Получить консультацию</button>
         </div>
     </div>
-    <div class="popup-header">
-        <p class="popup-header__title">Оставьте заявку</p>
-        <p class="popup-header__subtitle">и мы с Вами свяжемся в течении 30 мин</p>
-        <form action="#" class="popup-header__form">
+    <div class="popup-header popup">
+        <p class="popup-header__title popup__title">Оставьте заявку</p>
+        <p class="popup-header__subtitle popup__subtitle">и мы с Вами свяжемся в течении 30 мин</p>
+        <form action="#" class="popup-header__form popup__form">
             <input type="text" class="input" placeholder="Ваше имя">
             <input type="tel" class="input phone" placeholder="Ваш номер телефона">
-            <span class="popup-header__wrong wrong"><span>*</span> Не верно заполнено!</span>
-            <button type="submit" class="popup-header__button"><span>Оставить заявку</span></button>
+            <span class="popup-header__wrong popup__wrong wrong"><span>*</span> Не верно заполнено!</span>
+            <button type="submit" class="popup-header__button popup__button"><span>Оставить заявку</span></button>
         </form>
+        <span class="popup-header__agree popup__agree">Нажимая на&nbsp;кнопку, вы&nbsp;соглашаетесь с&nbsp;политикой конфиденциальности</span>
     </div>
 </header>        <div class="content">
             <div class="advantages">
@@ -315,6 +316,52 @@
                             <a href="#" class="block__full"><span>полное описание</span><div></div></a>
                             <button class="orange-circle-button button block__button"><span>Заказать</span></button>
 
+                        </div>
+                    </div>
+                    <div class="series__block block">
+                        <div class="block__top block__cloud">
+                            <div></div>
+                            <img src="img/500-serie/cloud.svg" alt="cloud">
+                            <span>cloud</span>
+                        </div>
+                        <img src="img/500-serie/ap510c-1.png" alt="AP510c" class="block__image" style="@media (min-width: 1023px) {width: 284px; top: 10px; right: -10px}">
+                        <div class="block__content">
+                            <p class="block__name">AP510c</p>
+                            <p class="block__desc">Характеристики</p>
+                            <ul class="block__list">
+                                <li class="block__paragraph">Поддержка стандарта 802.11ax</li>
+                                <li class="block__paragraph">Работа в диапазонах</li>
+                                <li class="block__paragraph">2.4GHz и 5GHz в режиме 4x4:4</li>
+                                <li class="block__paragraph">Tри режима работы точки:</li>
+                                <li class="block__paragraph">Режим 1:  R1– клиенты 2,4Ггц; R2 – клиенты 5Ггц</li>
+                                <li class="block__paragraph">Режим 2:  1 – cенсор 2,4ггц/5Ггц; R2 - клиенты 5Ггц</li>
+                                <li class="block__paragraph">Режим 3:  R1/R2 - клиенты 5Ггц</li>
+                                <li class="block__paragraph">Встроенный приемопередатчик BLE 4.0</li>
+                                <li class="block__paragraph">Два сетевых интерфейса:</li>
+                                <li class="block__paragraph">100/1000/2.5G/5G Ethernet</li>
+                                <li class="block__paragraph">10/100/1000 Ethernet</li>
+                                <li class="block__paragraph">Консольный интерфейс</li>
+                                <li class="block__paragraph">Питание от РоЕ/РоЕ+ на двух Ethernet интерфейсах</li>
+                                <li class="block__paragraph">Разъем для внешнего блока питания (12VDC)</li>
+                                <li class="block__paragraph">Интегрированные/внешние антенны</li>
+                                <li class="block__paragraph">Для использования внутри помещений</li>
+                            </ul>
+                            <button class="block__more"><span>подробнее</span><div></div></button>
+                            <a href="#" class="block__full"><span>полное описание</span><div></div></a>
+                            <button class="orange-circle-button button block__button"><span>Заказать</span></button>
+
+                        </div>
+                    </div>
+                    <div class="offer">
+                        <p class="offer__title">Спецпредложени﻿е  для партнеров</p>
+                        <div class="offer__block">
+                            <div class="offer__left">
+                                <img src="img/500-serie/offer/ap505i.png" alt="ap505i">
+                            </div>
+                            <div class="offer__right">
+                                <p class="offer__content">Возьмите в&nbsp;RRC на <span>БЕСПЛАТНОЕ тестирование</span> точку доступа 500-й серии от&nbsp;Extreme Networks <b>и&nbsp;убедитесь в&nbsp;ее&nbsp;эффективности</b></p>
+                                <button class="white-circle-button button offer__button"><span>узнать условия</span></button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -801,7 +848,59 @@
                         <input type="tel" class="input phone" placeholder="Телефон" data-input="Телефон">
                         <span class="consult__wrong wrong"><span>*</span> Не верно заполнено!</span>
                         <button type="submit" class="white-circle-button button consult__button"><span>Получить консультацию</span></button>
+                        <span class="consult__agree popup__agree">Нажимая на&nbsp;кнопку, вы&nbsp;соглашаетесь с&nbsp;политикой конфиденциальности</span>
                     </form>
+                </div>
+            </div>
+        </div>
+        <div class="popup-order-bg popup-bg">
+            <div class="popup-order popup">
+                <p class="popup-order__title popup__title">Заказать <span>AP305CX</span></p>
+                <form action="#" class="popup-order__form popup__form">
+                    <input type="text" class="input" placeholder="Ваше имя">
+                    <input type="tel" class="input phone" placeholder="Ваш номер телефона">
+                    <span class="popup-order__wrong popup__wrong wrong"><span>*</span> Не верно заполнено!</span>
+                    <button type="submit" class="popup-order__button popup__button"><span>Оставить заявку</span></button>
+                </form>
+                <span class="popup-order__agree popup__agree">Нажимая на&nbsp;кнопку, вы&nbsp;соглашаетесь с&nbsp;политикой конфиденциальности</span>
+            </div>
+        </div>
+        <div class="popup-bg popup-description-bg">
+            <div class="popup-description">
+                <div class="popup-description__top popup-description__cloud">
+                    <div></div>
+                    <img src="img/300-serie/cloud.svg" alt="cloud">
+                    <span>cloud</span>
+                    <p>+</p>
+                </div>
+                <div class="popup-description__block">
+                    <div class="popup-description__left">
+                        <p class="popup-description__name">AP305CX</p>
+                        <p class="popup-description__desc">Характеристики</p>
+                        <ul class="popup-description__list">
+                            <li class="popup-description__paragraph">Поддержка стандарта 802.11ax</li>
+                            <li class="popup-description__paragraph">Работа в диапазонах</li>
+                            <li class="popup-description__paragraph">2.4GHz и 5GHz в режиме 4x4:4</li>
+                            <li class="popup-description__paragraph">Tри режима работы точки:</li>
+                            <li class="popup-description__paragraph">Режим 1:  R1– клиенты 2,4Ггц; R2 – клиенты 5Ггц</li>
+                            <li class="popup-description__paragraph">Режим 2:  1 – cенсор 2,4ггц/5Ггц; R2 - клиенты 5Ггц</li>
+                            <li class="popup-description__paragraph">Режим 3:  R1/R2 - клиенты 5Ггц</li>
+                            <li class="popup-description__paragraph">Встроенный приемопередатчик BLE 4.0</li>
+                            <li class="popup-description__paragraph">Два сетевых интерфейса:</li>
+                            <li class="popup-description__paragraph">100/1000/2.5G/5G Ethernet</li>
+                            <li class="popup-description__paragraph">10/100/1000 Ethernet</li>
+                            <li class="popup-description__paragraph">Консольный интерфейс</li>
+                            <li class="popup-description__paragraph">Питание от РоЕ/РоЕ+ на двух Ethernet интерфейсах</li>
+                            <li class="popup-description__paragraph">Разъем для внешнего блока питания (12VDC)</li>
+                            <li class="popup-description__paragraph">Интегрированные/внешние антенны</li>
+                            <li class="popup-description__paragraph">Для использования внутри помещений</li>
+                        </ul>
+                        <a href="#" class="popup-description__full"><span>полное описание</span><div></div></a>
+                    </div>
+                    <div class="popup-description__right">
+                        <img src="img/300-serie/ap305cx.png" alt="AP305CX" class="popup-description__image">
+                        <button class="orange-circle-button button popup-description__button"><span>Заказать</span></button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -813,8 +912,8 @@
                 <img src="img/logo-extreme-blue.svg" alt="logo-extreme">
             </div>
             <div class="footer__column">
-                <span>extremenetworks@rrc.ru</span>
-                <span>+7 (495) 956 17 17</span>
+                <span><a href="#">extremenetworks@rrc.ru</a></span>
+                <span><a href="#">+7 (495) 956 17 17</a></span>
             </div>
         </div>
         <div class="footer__bottom">
