@@ -159,7 +159,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .header {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background: url(../img/earth-background.jpg) no-repeat left center, linear-gradient(253.23deg, #6209D5 0%, rgba(44, 173, 202, 0.97) 100%);
   background-blend-mode: multiply, screen;
@@ -167,7 +167,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 1023px) {
   .header {
-    height: initial;
+    min-height: initial;
   }
 }
 .header > .container {
@@ -268,6 +268,7 @@ h1, h2, h3, h4, h5, h6 {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  background: url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMzgxIDQzNyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48bGluZWFyR3JhZGllbnQgaWQ9ImEiIGdyYWRpZW50VHJhbnNmb3JtPSJtYXRyaXgoMzgxIDAgMCAtNDM3IC0xMDIyMjAgMjA5NzE4KSIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIyNjkuNzU2IiB4Mj0iMjcwLjc1NiIgeTE9IjQ3OS40MDQiIHkyPSI0NzkuNDA0Ij48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMzZjUwZmYiLz48c3RvcCBvZmZzZXQ9Ii4yIiBzdG9wLWNvbG9yPSIjNDQ4Y2ZjIi8+PHN0b3Agb2Zmc2V0PSIuNCIgc3RvcC1jb2xvcj0iIzRhYzNmYSIvPjxzdG9wIG9mZnNldD0iLjYiIHN0b3AtY29sb3I9IiM0ZmY1ZjciLz48c3RvcCBvZmZzZXQ9Ii44IiBzdG9wLWNvbG9yPSIjNTRmNGM2Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjNTlmMjk4Ii8+PC9saW5lYXJHcmFkaWVudD48cGF0aCBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik03MTYuOSA0MzdjODguMyAwIDIyMS4xLTc5LjkgMjIxLjEtMTc4LjVTODA1LjMgMCA3MTYuOSAwIDU1NyAxNTkuOCA1NTcgMjU4LjUgNjI4LjYgNDM3IDcxNi45IDQzN3oiIGZpbGw9InVybCgjYSkiIGZpbGwtcnVsZT0iZXZlbm9kZCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTU1NykiLz48L3N2Zz4=") no-repeat;
 }
 @media (max-width: 700px) {
   .header__content {
@@ -321,11 +322,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-@media (max-width: 1023px) {
-  .header__consult {
-    padding-bottom: 50px;
-  }
+  padding-bottom: 50px;
 }
 @media (max-width: 767px) {
   .header__consult {
@@ -1584,11 +1581,12 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 450px) {
   .block__image {
     position: absolute;
-    max-height: 50px;
-    right: 0;
+    max-height: 110px;
+    right: 50%;
+    transform: translateX(50%);
     margin-left: 0;
     margin-top: 0;
-    top: 30px;
+    top: 61px;
   }
 }
 .block__content {
@@ -1624,7 +1622,8 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 450px) {
   .block__name {
     font-size: 12px;
-    margin-bottom: 25px;
+    margin-bottom: 110px;
+    text-align: center;
   }
 }
 .block__desc {
@@ -1654,6 +1653,7 @@ h1, h2, h3, h4, h5, h6 {
   .block__list {
     margin-top: 7px;
     margin-bottom: 7px;
+    max-height: 70px;
   }
 }
 .block__paragraph {

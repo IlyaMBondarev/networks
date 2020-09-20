@@ -110,7 +110,7 @@ blocks.forEach(block => {
     let lists = block.querySelectorAll('.block__paragraph');
     let openMore = block.querySelector('.block__more');
     let toOrder = block.querySelector('.block__button');
-    let full = name.dataset.full;
+    let full = block.dataset.full;
     openMore.addEventListener('click', () => {
         popupDescName.textContent = name.textContent;
         popupDescTopImg.src = `img/300-serie/${top}.svg`;
@@ -133,3 +133,11 @@ blocks.forEach(block => {
         popupOrder.style.opacity = '1';
     })
 })
+
+
+let bg = document.querySelector('.gifts__right').querySelector('img');
+window.addEventListener('mousemove', function(e) {
+    let x = e.clientX / window.innerWidth;
+    let y = e.clientY / window.innerHeight;
+    bg.style.transform = 'translate(-' + x * 30 + 'px, -' + y * 30 + 'px)';
+});
