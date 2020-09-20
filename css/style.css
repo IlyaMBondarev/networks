@@ -268,6 +268,7 @@ h1, h2, h3, h4, h5, h6 {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  background: url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMzgxIDQzNyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48bGluZWFyR3JhZGllbnQgaWQ9ImEiIGdyYWRpZW50VHJhbnNmb3JtPSJtYXRyaXgoMzgxIDAgMCAtNDM3IC0xMDIyMjAgMjA5NzE4KSIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIyNjkuNzU2IiB4Mj0iMjcwLjc1NiIgeTE9IjQ3OS40MDQiIHkyPSI0NzkuNDA0Ij48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMzZjUwZmYiLz48c3RvcCBvZmZzZXQ9Ii4yIiBzdG9wLWNvbG9yPSIjNDQ4Y2ZjIi8+PHN0b3Agb2Zmc2V0PSIuNCIgc3RvcC1jb2xvcj0iIzRhYzNmYSIvPjxzdG9wIG9mZnNldD0iLjYiIHN0b3AtY29sb3I9IiM0ZmY1ZjciLz48c3RvcCBvZmZzZXQ9Ii44IiBzdG9wLWNvbG9yPSIjNTRmNGM2Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjNTlmMjk4Ii8+PC9saW5lYXJHcmFkaWVudD48cGF0aCBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik03MTYuOSA0MzdjODguMyAwIDIyMS4xLTc5LjkgMjIxLjEtMTc4LjVTODA1LjMgMCA3MTYuOSAwIDU1NyAxNTkuOCA1NTcgMjU4LjUgNjI4LjYgNDM3IDcxNi45IDQzN3oiIGZpbGw9InVybCgjYSkiIGZpbGwtcnVsZT0iZXZlbm9kZCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTU1NykiLz48L3N2Zz4=") no-repeat;
 }
 @media (max-width: 700px) {
   .header__content {
@@ -556,24 +557,33 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
 }
 .popup__form > input {
+  position: relative;
   padding: 7px 1px;
   width: 364px;
   background-color: transparent;
   margin-bottom: 33px;
+}
+.popup__form > input::placeholder {
+  position: absolute;
+  left: 0;
+  transition: all 0.4s ease;
+}
+.popup__form > input:active, .popup__form > input:focus {
+  color: #2BACE2;
+  border-bottom: 1px solid #2BACE2;
+}
+.popup__form > input:active::placeholder, .popup__form > input:focus::placeholder {
+  color: #2BACE2;
+  transform: translateX(290px);
 }
 @media (max-width: 500px) {
   .popup__form > input {
     margin-bottom: 20px;
     width: 250px;
   }
-}
-.popup__form > input:focus, .popup__form > input:active {
-  color: #2BACE2;
-  border-bottom: 1px solid #2BACE2;
-}
-.popup__form > input:focus::placeholder, .popup__form > input:active::placeholder {
-  color: #2BACE2;
-  text-align: right;
+  .popup__form > input:active::placeholder, .popup__form > input:focus::placeholder {
+    transform: translateX(175px);
+  }
 }
 .popup__button {
   margin-top: 12px;
@@ -2500,6 +2510,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .consult__form > input {
+  position: relative;
   margin-bottom: 30px;
   background: rgba(255, 255, 255, 0.14);
   border: 1px solid #ffffff;
