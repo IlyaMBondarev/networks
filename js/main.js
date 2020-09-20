@@ -4,6 +4,17 @@ document.querySelector('.wrapper').classList.add('loaded');
 $(document).ready(function() {
     //маски для телефонов
     $(".phone").mask("+7 (999) 99-99-999");
+    let controller = new ScrollMagic.Controller();
+    let revealElements = document.getElementsByClassName("icon-animate");
+    for (let i = 0; i < revealElements.length; i++) { // create a scene for each element
+        new ScrollMagic.Scene({
+            triggerElement: revealElements[i], // y value not modified, so we can use element as trigger as well
+            offset: 50,												 // start a little later
+            triggerHook: 0.9,
+        })
+            .setClassToggle(revealElements[i], "visible") // add class toggle
+            .addTo(controller);
+    }
 });
 
 let forms = document.querySelectorAll('form');
