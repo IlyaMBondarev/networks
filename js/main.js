@@ -36,6 +36,7 @@ forms.forEach(form => {
 
 let popupHeader = document.querySelector('.popup-header-bg');
 let popupHeaderOpener = document.querySelectorAll('.popup-header-open');
+let popupHeaderClose = popupHeader.querySelector('.popup-header__close');
 
 popupHeaderOpener.forEach(opener => {
     opener.addEventListener('click', () => {
@@ -55,6 +56,14 @@ popupHeader.addEventListener('click', (event) => {
     }
 })
 
+popupHeaderClose.addEventListener('click', () => {
+    popupHeader.style.opacity = '0';
+    setTimeout(() => {
+        popupHeader.style.zIndex = '-1';
+        popupHeader.style.visibility = 'hidden';
+    },200)
+})
+
 let blocks = document.querySelectorAll('.block');
 let popupDesc = document.querySelector('.popup-description-bg');
 let popupDescClose = popupDesc.querySelector('.popup-description__close');
@@ -68,6 +77,15 @@ let popupDescFull = popupDesc.querySelector('.popup-description__full');
 
 let popupOrder = document.querySelector('.popup-order-bg');
 let popupOrderName = popupOrder.querySelector('.popup-order__title').querySelector('span');
+let popupOrderClose = popupOrder.querySelector('.popup-order__close');
+
+popupOrderClose.addEventListener('click', (event) => {
+    popupOrder.style.opacity = '0';
+    setTimeout(() => {
+        popupOrder.style.zIndex = '-1';
+        popupOrder.style.visibility = 'hidden';
+    },200)
+})
 
 popupOrder.addEventListener('click', (event) => {
     if (event.target === popupOrder) {

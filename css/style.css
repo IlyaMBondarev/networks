@@ -268,7 +268,6 @@ h1, h2, h3, h4, h5, h6 {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  background: url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMzgxIDQzNyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48bGluZWFyR3JhZGllbnQgaWQ9ImEiIGdyYWRpZW50VHJhbnNmb3JtPSJtYXRyaXgoMzgxIDAgMCAtNDM3IC0xMDIyMjAgMjA5NzE4KSIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIyNjkuNzU2IiB4Mj0iMjcwLjc1NiIgeTE9IjQ3OS40MDQiIHkyPSI0NzkuNDA0Ij48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMzZjUwZmYiLz48c3RvcCBvZmZzZXQ9Ii4yIiBzdG9wLWNvbG9yPSIjNDQ4Y2ZjIi8+PHN0b3Agb2Zmc2V0PSIuNCIgc3RvcC1jb2xvcj0iIzRhYzNmYSIvPjxzdG9wIG9mZnNldD0iLjYiIHN0b3AtY29sb3I9IiM0ZmY1ZjciLz48c3RvcCBvZmZzZXQ9Ii44IiBzdG9wLWNvbG9yPSIjNTRmNGM2Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjNTlmMjk4Ii8+PC9saW5lYXJHcmFkaWVudD48cGF0aCBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik03MTYuOSA0MzdjODguMyAwIDIyMS4xLTc5LjkgMjIxLjEtMTc4LjVTODA1LjMgMCA3MTYuOSAwIDU1NyAxNTkuOCA1NTcgMjU4LjUgNjI4LjYgNDM3IDcxNi45IDQzN3oiIGZpbGw9InVybCgjYSkiIGZpbGwtcnVsZT0iZXZlbm9kZCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTU1NykiLz48L3N2Zz4=") no-repeat;
 }
 @media (max-width: 700px) {
   .header__content {
@@ -404,6 +403,21 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.39);
 }
+.popup-header__close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transform: rotate(45deg);
+  color: #FFFFFF;
+  font-size: 30px;
+  cursor: pointer;
+}
+@media (max-width: 500px) {
+  .popup-header__close {
+    top: 10px;
+    right: 15px;
+  }
+}
 .popup-header-bg {
   transition: opacity 0.2s linear;
   top: 0;
@@ -459,6 +473,21 @@ h1, h2, h3, h4, h5, h6 {
 .popup-order-bg {
   background-color: #E4F7FF;
 }
+.popup-order__close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transform: rotate(45deg);
+  color: rgba(144, 203, 228, 0.9);
+  font-size: 30px;
+  cursor: pointer;
+}
+@media (max-width: 500px) {
+  .popup-order__close {
+    top: 10px;
+    right: 15px;
+  }
+}
 .popup-order__title {
   color: #113464;
 }
@@ -498,6 +527,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 500px) {
   .popup {
     padding: 30px 15px 20px;
+    border-radius: 30px;
   }
 }
 .popup-bg {
