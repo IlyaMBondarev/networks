@@ -513,6 +513,37 @@ h1, h2, h3, h4, h5, h6 {
   color: #113464;
 }
 
+.popup-thanks {
+  position: absolute;
+  background-color: #ffffff;
+}
+.popup-thanks-bg {
+  background-color: #E4F7FF;
+}
+.popup-thanks__content {
+  white-space: nowrap;
+  padding-bottom: 19px;
+  font-weight: 700;
+  font-size: 22px;
+  color: #113464;
+}
+@media (max-width: 600px) {
+  .popup-thanks__content {
+    font-size: 16px;
+  }
+}
+@media (max-width: 500px) {
+  .popup-thanks__content {
+    padding-top: 5px;
+    padding-bottom: 15px;
+  }
+}
+@media (max-width: 400px) {
+  .popup-thanks__content {
+    font-size: 14px;
+  }
+}
+
 .popup {
   left: 50%;
   top: 50%;

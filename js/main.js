@@ -2,8 +2,24 @@
 document.querySelector('.wrapper').classList.add('loaded');
 
 $(document).ready(function() {
+
+    $.fn.setCursorPosition = function(pos) {
+        if ($(this).get(0).setSelectionRange) {
+            $(this).get(0).setSelectionRange(pos, pos);
+        } else if ($(this).get(0).createTextRange) {
+            let range = $(this).get(0).createTextRange();
+            range.collapse(true);
+            range.moveEnd('character', pos);
+            range.moveStart('character', pos);
+            range.select();
+        }
+    };
+
     //маски для телефонов
-    $(".phone").mask("+7 (999) 99-99-999");
+    $(".phone").click(function(){
+        $(this).setCursorPosition(3);
+    }).mask("+7 (999) 99-99-999",{autoclear: false});
+
     let controller = new ScrollMagic.Controller();
     let revealElements = document.getElementsByClassName("icon-animate");
     for (let i = 0; i < revealElements.length; i++) { // create a scene for each element
@@ -17,22 +33,6 @@ $(document).ready(function() {
     }
 });
 
-let forms = document.querySelectorAll('form');
-
-forms.forEach(form => {
-    let inputs = form.querySelectorAll('input');
-    let wrongMessage = form.querySelector('.wrong');
-    let button = form.querySelector('button');
-    button.addEventListener('click', () => {
-        if (inputs[0].value === '' || inputs[1].value === '') {
-            wrongMessage.style.visibility = 'visible';
-            return false
-        } else {
-            wrongMessage.style.visibility = 'hidden';
-            form.submit();
-        }
-    })
-})
 
 let popupHeader = document.querySelector('.popup-header-bg');
 let popupHeaderOpener = document.querySelectorAll('.popup-header-open');
@@ -80,6 +80,17 @@ let popupOrder = document.querySelector('.popup-order-bg');
 let popupOrderName = popupOrder.querySelector('.popup-order__title').querySelector('span');
 let popupOrderClose = popupOrder.querySelector('.popup-order__close');
 
+let popupThanks = document.querySelector('.popup-thanks-bg');
+let popupThanksClose = popupThanks.querySelector('.popup-order__close');
+
+popupThanksClose.addEventListener('click', (event) => {
+    popupThanks.style.opacity = '0';
+    setTimeout(() => {
+        popupThanks.style.zIndex = '-1';
+        popupThanks.style.visibility = 'hidden';
+    },200)
+})
+
 popupOrderClose.addEventListener('click', (event) => {
     popupOrder.style.opacity = '0';
     setTimeout(() => {
@@ -123,6 +134,16 @@ popupDescClose.addEventListener('click', () => {
         },200)
 })
 
+popupThanks.addEventListener('click', (event) => {
+    if (event.target === popupThanks) {
+        popupThanks.style.opacity = '0';
+        setTimeout(() => {
+            popupThanks.style.zIndex = '-1';
+            popupThanks.style.visibility = 'hidden';
+        },200)
+    }
+})
+
 blocks.forEach(block => {
     let top = block.querySelector('.block__top').querySelector('span').textContent;
     let name = block.querySelector('.block__name');
@@ -155,6 +176,34 @@ blocks.forEach(block => {
     })
 })
 
+
+let forms = document.querySelectorAll('form');
+
+forms.forEach(form => {
+    let inputs = form.querySelectorAll('input');
+    let wrongMessage = form.querySelector('.wrong');
+    let button = form.querySelector('button');
+    button.addEventListener('click', () => {
+        if (inputs[0].value === '' || inputs[1].value.length < 10) {
+            wrongMessage.style.visibility = 'visible';
+            return false
+        } else {
+            wrongMessage.style.visibility = 'hidden';
+            popupThanks.style.opacity = '1';
+            popupThanks.style.zIndex = '300';
+            popupThanks.style.visibility = 'visible';
+            setTimeout(() => {
+                popupOrder.style.opacity = '0';
+                popupOrder.style.zIndex = '-1';
+                popupOrder.style.visibility = 'hidden';
+                popupHeader.style.opacity = '0';
+                popupHeader.style.zIndex = '-1';
+                popupHeader.style.visibility = 'hidden';
+            },200)
+            form.submit();
+        }
+    })
+})
 
 let bg = document.querySelector('.gifts__right').querySelector('img');
 window.addEventListener('mousemove', function(e) {
