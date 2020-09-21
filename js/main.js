@@ -3,22 +3,38 @@ document.querySelector('.wrapper').classList.add('loaded');
 
 $(document).ready(function() {
 
-    $.fn.setCursorPosition = function(pos) {
-        if ($(this).get(0).setSelectionRange) {
-            $(this).get(0).setSelectionRange(pos, pos);
-        } else if ($(this).get(0).createTextRange) {
-            let range = $(this).get(0).createTextRange();
-            range.collapse(true);
-            range.moveEnd('character', pos);
-            range.moveStart('character', pos);
-            range.select();
-        }
-    };
-
     //маски для телефонов
-    $(".phone").click(function(){
-        $(this).setCursorPosition(3);
-    }).mask("+7 (999) 99-99-999",{autoclear: false});
+
+    function setCursorPosition(pos, elem) {
+        elem.focus();
+        if (elem.setSelectionRange) elem.setSelectionRange(pos, pos);
+        else if (elem.createTextRange) {
+            var range = elem.createTextRange();
+            range.collapse(true);
+            range.moveEnd("character", pos);
+            range.moveStart("character", pos);
+            range.select()
+        }
+    }
+
+    function mask(event) {
+        var matrix = "+7 (___) ___ ____",
+            i = 0,
+            def = matrix.replace(/\D/g, ""),
+            val = this.value.replace(/\D/g, "");
+        if (def.length >= val.length) val = def;
+        this.value = matrix.replace(/./g, function(a) {
+            return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? "" : a
+        });
+        if (event.type == "blur") {
+            if (this.value.length == 2) this.value = ""
+        } else setCursorPosition(this.value.length, this)
+    }
+
+    let phones = document.querySelectorAll(".phone");
+    phones.forEach(phone => phone.addEventListener("input", mask, false));
+    phones.forEach(phone => phone.addEventListener("focus", mask, false));
+    phones.forEach(phone => phone.addEventListener("blur", mask, false));
 
     let controller = new ScrollMagic.Controller();
     let revealElements = document.getElementsByClassName("icon-animate");
