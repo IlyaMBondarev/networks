@@ -2004,6 +2004,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .offer__left > img {
+  height: initial;
   width: 100%;
 }
 @media (max-width: 1360px) {
